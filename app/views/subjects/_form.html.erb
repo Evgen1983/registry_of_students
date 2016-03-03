@@ -1,0 +1,20 @@
+
+<h1>New Subject</h1>
+<%= form_for([@student, @student.subjects.build]) do |f| %>
+  
+  <div class="field">
+    <%= f.label :semestr %><br>
+    <%= f.text_field :semestr %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :grade %><br>
+    <%= f.text_field :grade %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

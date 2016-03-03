@@ -1,0 +1,58 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @student.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @student.last_name %>
+</p>
+
+<p>
+  <strong>Learning team:</strong>
+  <%= @student.learning_team %>
+</p>
+
+<p>
+  <strong>Birthday:</strong>
+  <%= @student.birthday %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @student.email %>
+</p>
+
+<p>
+  <strong>Ip adress:</strong>
+  <%= @student.ip_adress %>
+</p>
+
+<%= link_to 'Edit', edit_student_path(@student) %> |
+<%= link_to 'Back', students_path %>
+
+<h1>Listing Subjects</h1>
+<table>
+<thead>
+    <tr>
+      <th>Semestr</th>
+      <th>Name</th>
+      <th>Grade</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @student.subjects %>
+  </tbody>
+</table>
+ 
+
+<%= render 'subjects/form' %>
+
+<%= if @student.characteristic.present?
+   render @student.characteristic 
+else
+   render 'characteristics/form' 
+end%>

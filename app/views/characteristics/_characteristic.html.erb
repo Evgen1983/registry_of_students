@@ -1,0 +1,10 @@
+
+<h1>Характеристика на студента</h1>
+<div>
+  <p><strong><%= characteristic.title %></strong></p>
+  <p><strong><%= characteristic.content %></strong></p>
+  <%= link_to 'Show', student_characteristic_path(characteristic.student, characteristic)%>
+  <%= link_to 'Destroy', [characteristic.student, characteristic], method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%= link_to 'Edit', edit_student_characteristic_path(characteristic.student, characteristic) %>
+</div>
+ 

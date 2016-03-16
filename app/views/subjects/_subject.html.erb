@@ -3,9 +3,8 @@
         <td><%= subject.semestr %></td>
         <td><%= subject.name %></td>
         <td><%= subject.grade %></td>     
-        <td><%= link_to 'Show', student_subject_path(subject.student, subject)%>
-        <td><%= link_to 'Destroy', [subject.student, subject], method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <td><%= link_to 'Edit', edit_student_subject_path(subject.student, subject) %></td>
-      </tr>  
-
+        <td><%=link_to 'Show', student_subject_path(subject.student, subject) %></td>
+        <td><%=link_to 'Destroy', [subject.student, subject], method: :delete, data: { confirm: 'Are you sure?' }%></td>
+        <td><%=link_to 'Edit', edit_student_subject_path(subject.student, subject)%></td>
+      </tr> 
 

@@ -2,7 +2,7 @@ require 'test_helper'
 
 class StudentsControllerTest < ActionController::TestCase
   setup do
-    @student = students(:one)
+    @student = students(:first)
   end
 
   test "should get index" do
@@ -18,7 +18,7 @@ class StudentsControllerTest < ActionController::TestCase
 
   test "should create student" do
     assert_difference('Student.count') do
-      post :create, student: { birthday: @student.birthday, email: @student.email, first_name: @student.first_name, ip_adress: @student.ip_adress, last_name: @student.last_name, learning_team: @student.learning_team }
+      post :create, student: { birthday: @student.birthday, email: 'foo@bar.com', first_name: @student.first_name, ip_adress: @student.ip_adress, last_name: @student.last_name, learning_team: @student.learning_team }
     end
 
     assert_redirected_to student_path(assigns(:student))

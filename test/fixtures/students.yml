@@ -1,17 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+first:
   first_name: MyString
   last_name: MyString
   learning_team: MyString
   birthday: 2016-02-24
-  email: MyString
+  email: mail@mail.ru
   ip_adress: MyString
 
-two:
+second:
   first_name: MyString
   last_name: MyString
   learning_team: MyString
   birthday: 2016-02-24
-  email: MyString
+  email: mail@mail.rb
   ip_adress: MyString

@@ -23,7 +23,7 @@ class CharacteristicsController < ApplicationController
         format.html { redirect_to student_path(@student), notice: 'Characteristic was successfully created.' }
         format.json { render :show, status: :created, location: @characteristic }
       else
-        format.html { render :new }
+        format.html { redirect_to student_path(@student) }
         format.json { render json: @characteristic.errors, status: :unprocessable_entity }
       end
     end

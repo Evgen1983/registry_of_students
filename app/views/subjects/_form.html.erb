@@ -1,6 +1,6 @@
 
 <h1>New Subject</h1>
-<%= form_for([@student, @student.subjects.build]) do |f| %>
+<%= form_for([@student, @student.subjects.build], validate: true) do |f| %>
   
   <div class="field">
     <%= f.label :semestr %><br>

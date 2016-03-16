@@ -1,4 +1,4 @@
-<%= form_for([@characteristic.student, @characteristic]) do |f| %>
+<%= form_for([@characteristic.student, @characteristic], validate: true) do |f| %>
   
   <div class="field">
     <%= f.label :title %><br>

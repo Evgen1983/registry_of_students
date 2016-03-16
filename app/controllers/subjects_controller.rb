@@ -26,7 +26,7 @@ class SubjectsController < ApplicationController
         format.html { redirect_to student_path(@student), notice: 'Subject was successfully created.' }
         format.json { render :show, status: :created, location: @subject }
       else
-        format.html { render :new }
+        format.html { redirect_to student_path(@student)}
         format.json { render json: @subject.errors, status: :unprocessable_entity }
       end
     end
